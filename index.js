@@ -1,4 +1,5 @@
 const gqlLoader = require('graphql-tag/loader');
+const print = require('graphql/language/printer').print;
 const semver = require('semver');
 
 let upstreamTransformer = null;
@@ -42,7 +43,7 @@ function transform(src, filename, options) {
   // Do custom transformations
   let result = src;
   if (filename.endsWith('.gql') || filename.endsWith('.graphql')) {
-    result = gqlTransform(result);
+    result = print(gqlTransform(result));
   }
 
   const babelCompileResult = upstreamTransformer.transform({
