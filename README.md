@@ -2,8 +2,6 @@
 
 Fork of [bamlab's original transformer](https://github.com/bamlab/react-native-graphql-transformer)
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors)
-
 Seamlessly use GraphQL files with react-native >= 0.45
 
 ## Foreword
